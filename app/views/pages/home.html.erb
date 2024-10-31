@@ -1,8 +1,9 @@
-<h1>Pages#home</h1>
+<h1>yapyap</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
 
 <% if current_user %>
+  <%= link_to "Start Chatting", rooms_path %>
   <p>Logged in as  <%= current_user.email %> </p>
   <%= button_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
 <% else %>
